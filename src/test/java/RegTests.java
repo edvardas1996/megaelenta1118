@@ -12,16 +12,16 @@ public class RegTests {
 
     @Test
     public void regPositiveTest(){
-        Registration ad = new Registration("Edvarsadasd1","gengura@live.com","Moremore123","Moremore123");
+        Registration ad = new Registration("Edvaxcrsfdasdsaqweddfasd1","gengsxcaudsddfrdfda@live.com","Moremore123","Moremore123");
         ad.fillReg();
-        Assert.assertEquals("","");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"main-container\"]/div[2]/h1/b")).getText(),"Jūs sėkmingai prisiregistravote!");
     }
 
     @Test
-    public void regPositiveTest2(){
-        Registration ad = new Registration("Edvarsadasd12","gengudwra@live.com","Moremore123","Moremore123");
+    public void regNoUsername(){
+        Registration ad = new Registration("","gengudsadfdwra@live.com","Moremore123","Moremore123");
         ad.fillReg();
-        Assert.assertEquals("","");
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"main-container\"]/form/fieldset/table/tbody/tr[1]/td[2]/span")).getText(),"Įveskite vartotojo vardą.");
     }
 
 
